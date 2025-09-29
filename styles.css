@@ -1,0 +1,17 @@
+p {
+text-align: center; color: red;
+}
+#para1 {
+text-align: center; color: blue;
+}
+.center {
+text-align: center; color: green;
+}
+body {
+background: mediumaquamarine;
+font-family: Arial, Helvetica, sans-serif;
+}
+h1 {
+color: rgb(14, 0, 67);
+text-align: center;
+}
