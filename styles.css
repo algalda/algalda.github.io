@@ -15,12 +15,53 @@ h1 {
 color: rgb(14, 0, 67);
 text-align: center;
 }
-.projects { display:flex; flex-wrap:wrap; } /* condensed to save space */
+.projects {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center; /* center project items horizontally */
+	text-align: center; /* center inline content as a fallback */
+}
 .project {
-width: 30%;
-margin: 10px;
-padding: 20px 10px;
-background: white; /* pick a color */
-border-radius: 25%;
+	width: 30%;
+	margin: 10px;
+	padding: 20px 10px;
+	background: white; /* pick a color */
+	border-radius: 25%;
+	text-align: center; /* center content inside each project box */
+}
+
+/* Make sure the middle column that contains projects can grow full-width
+	 (overrides inline width:30% in the HTML) and center its children. */
+#middleThird {
+	width: 100%;
+	display: block;
+}
+/*#leftThird {
+    align-items: left;
+    justify-content: left;
+    justify-items: left;
+}*/
+
+/* Center project boxes within a max-width container and make them
+	 responsive: use flex-basis so they wrap and remain centered. */
+.projects {
+	justify-content: center; /* ensure rows are centered */
+	max-width: 1200px;
+	margin: 0 auto; /* center the projects container on the page */
+	box-sizing: border-box;
+}
+.project {
+	box-sizing: border-box;
+	flex: 0 1 300px; /* preferred width 300px, shrink or grow as needed */
+	width: auto; /* let flex-basis control sizing */
+}
+.about {
+text-align: center;
+}
+.skills {
+text-align: center;
+}
+.contact {
 text-align: center;
 }
